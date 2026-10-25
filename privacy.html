@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>プライバシーポリシー | 名場面ノート自動投稿</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f6f8fa; color: #202b36; font-family: system-ui, sans-serif; line-height: 1.85; }
+header, main, footer { max-width: 48rem; margin: auto; padding: 1.25rem; }
+header { border-bottom: 1px solid #cbd5df; }
+nav { display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; }
+a { color: #064e9b; text-underline-offset: .2em; overflow-wrap: anywhere; }
+a:focus-visible { outline: 3px solid #8b4500; outline-offset: 4px; }
+h1 { font-size: clamp(1.6rem, 5vw, 2rem); line-height: 1.5; }
+h2 { font-size: 1.2rem; margin-top: 2rem; }
+p, li, code { overflow-wrap: anywhere; }
+li { margin-bottom: .6rem; }
+ul { padding-left: 1.5rem; }
+.notice { padding: 1rem; background: #fff4d9; border-left: 4px solid #8b4500; }
+footer { border-top: 1px solid #cbd5df; font-size: .9rem; }
+</style>
+</head>
+<body>
+<header><p><strong>名場面ノート自動投稿</strong> — 個人用ツールのご案内</p><nav aria-label="主なページ"><a href="index.html">アプリについて</a>
+<a href="privacy.html" aria-current="page">プライバシーポリシー</a>
+<a href="terms.html">利用規約</a></nav></header>
+<main>
+<h1>プライバシーポリシー</h1>
+<p>対象：名場面ノート自動投稿。本ツールは運営者本人専用です。現在は OAuth設定準備中で、接続・動画投稿は未実施です。以下は、利用開始時に適用するデータ取扱方針と設計であり、実装済みの安全対策や機能を保証する説明ではありません。</p>
+<h2>1. 取得・利用を予定する情報</h2>
+<ul>
+<li><code>youtube.upload</code>（<code>https://www.googleapis.com/auth/youtube.upload</code>）：本人が事前に承認した範囲にある動画、タイトル、説明、公開設定などを本人の YouTube チャンネルへ投稿するために使用する予定です。Google の権限説明は動画の管理を含み、投稿だけに限定された権限ではありません。</li>
+<li><code>youtube.readonly</code>（<code>https://www.googleapis.com/auth/youtube.readonly</code>）：本人の投稿先を確認するため、チャンネルの識別子や名称などを参照する予定です。権限自体は YouTube アカウントの閲覧を許可するもので、チャンネル名だけに限定されません。</li>
+<li>アクセストークンと更新用トークン：本人が許可した API 操作を行うために扱う設計です。Google のパスワードを本ツールで取得する設計ではありません。</li>
+<li>投稿結果の動画識別子など：本人による投稿結果の確認に必要な範囲で扱う予定です。</li>
+</ul>
+<p>権限の説明は <a href="https://developers.google.com/youtube/data/guides/auth/installed-apps">Google 公式の YouTube OAuth ドキュメント</a> を参照してください。実際の権限要求は、機能実装後、必要な最小限に限定します。</p>
+<h2>2. 保存先と公開サイトの境界</h2>
+<p>認証情報は将来の実装でもサーバー内の本人専用保存先で扱う設計です。トークン、非公開の Google データ、投稿素材はこの公開静的サイトへ送信・保存しません。保存期間、具体的な保護方法、削除手順の実装は利用開始前に確定・確認し、本方針へ反映します。現時点で暗号化や自動削除の実装完了は表明しません。</p>
+<p>このサイトに外部解析、広告、入力フォーム、外部スクリプトはありません。サイト独自の Cookie やブラウザー保存機能は使用しません。ただし公開後は配信事業者が配信・安全性のためアクセスログ等を扱う場合があり、外部リンク先では各事業者の方針が適用されます。</p>
+<h2>3. 共有・販売と Limited Use</h2>
+<p>Google API から受け取った情報の利用、および他のアプリへの転送を行う場合は、<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>（Limited Use 要件を含む）に従います。利用目的をここに記載した本人向け機能に限定する方針です。</p>
+<p>トークンおよび非公開の Google データを販売しません。広告配信・広告最適化・汎用AIモデルの学習に使用せず、その目的で第三者へ提供しません。投稿時には本人が事前に承認した範囲の動画・投稿情報を YouTube に送信します。それ以外の任意の第三者提供は行わず、法令上必要な開示がある場合は必要な範囲に限ります。</p>
+<h2>4. 接続解除とデータ削除</h2>
+<p>利用開始後のアクセス権の解除は、運営者本人が <a href="https://myaccount.google.com/permissions">Google アカウントの接続管理</a> で本ツールを選び、アクセス権を削除して行います。操作の詳細は <a href="https://support.google.com/accounts/answer/13533235?hl=ja">Google 公式ヘルプ</a> を参照してください。</p>
+<p>アクセス権の解除と保存データの削除は別の操作です。運営者本人が処理を停止し、ローカル保存データ（サーバー内の本人専用保存先に置くトークンや取得データを含む）の削除を管理する方針です。このサイトに削除機能や削除依頼フォームはありません。Google 上の投稿済み動画は接続解除のみでは削除されません。必要な動画削除は本人が YouTube 側で別途管理します。</p>
+<h2>5. 連絡先と変更</h2>
+<p>本方針やデータ取扱いに関する連絡先は Google OAuth 同意画面に表示されるサポート連絡先を参照してください。一般サポートサービスは提供しません。取扱いを変更する場合は本ページを更新し、新しい目的でのデータ利用や追加の権限要求は必要な説明・同意を経て行う方針です。</p>
+<p>Google による情報の取扱いについては <a href="https://policies.google.com/privacy">Google プライバシーポリシー</a> を参照してください。</p>
+</main>
+<footer><p>更新日：2026年10月25日</p><p>連絡先：Google OAuth 同意画面のサポート連絡先をご参照ください。</p></footer>
+</body>
+</html>
