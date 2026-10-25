@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>アプリについて | 名場面ノート自動投稿</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f6f8fa; color: #202b36; font-family: system-ui, sans-serif; line-height: 1.85; }
+header, main, footer { max-width: 48rem; margin: auto; padding: 1.25rem; }
+header { border-bottom: 1px solid #cbd5df; }
+nav { display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; }
+a { color: #064e9b; text-underline-offset: .2em; overflow-wrap: anywhere; }
+a:focus-visible { outline: 3px solid #8b4500; outline-offset: 4px; }
+h1 { font-size: clamp(1.6rem, 5vw, 2rem); line-height: 1.5; }
+h2 { font-size: 1.2rem; margin-top: 2rem; }
+p, li, code { overflow-wrap: anywhere; }
+li { margin-bottom: .6rem; }
+ul { padding-left: 1.5rem; }
+.notice { padding: 1rem; background: #fff4d9; border-left: 4px solid #8b4500; }
+footer { border-top: 1px solid #cbd5df; font-size: .9rem; }
+</style>
+</head>
+<body>
+<header><p><strong>名場面ノート自動投稿</strong> — 個人用ツールのご案内</p><nav aria-label="主なページ"><a href="index.html" aria-current="page">アプリについて</a>
+<a href="privacy.html">プライバシーポリシー</a>
+<a href="terms.html">利用規約</a></nav></header>
+<main>
+<h1>名場面ノート自動投稿</h1>
+<p>動画の投稿準備を補助する、運営者本人専用の個人用ツールです。一般ユーザー登録や第三者アカウントの運用を受け付けるサービスではありません。</p>
+<p class="notice"><strong>現在の状態：OAuth設定準備中。</strong>Google アカウントへの接続・動画投稿は未実施です。このサイトはアプリの説明を掲載するだけの静的サイトであり、ここから認証や投稿は行えません。</p>
+<h2>予定している用途</h2>
+<p>公式の YouTube Data API の使用に向け設定中です。運営者本人が管理する投稿先チャンネルの確認と、本人が事前に承認した範囲での自動投稿に限って利用する設計です。</p>
+<ul>
+<li>本人の投稿先チャンネルを確認し、投稿先の取り違えを防ぐ。</li>
+<li>事前に承認された対象・公開条件と権利確認・安全検査を満たす動画およびタイトル・説明などを YouTube に送信する。初回の公開承認や運用範囲の拡大は本人の確認を得る。</li>
+<li>無断転載、無承認での公開や第三者のアカウント操作には利用しない。</li>
+</ul>
+<h2>Google のアクセス権限</h2>
+<p>承認を求める予定の権限は <code>youtube.upload</code> と <code>youtube.readonly</code> です。用途と権限の範囲、データの扱いは <a href="privacy.html">プライバシーポリシー</a> に記載しています。設定や権限の必要性は利用開始前に確認します。</p>
+<h2>このサイトと投稿ツールは別です</h2>
+<p>認証情報や Google API 経由のデータは、この公開静的サイトへ送信・保存しません。ログイン機能、投稿機能、問い合わせフォーム、解析ツールは設置していません。</p>
+<h2>権利と独立性</h2>
+<p>本ツールは Google、YouTube、COVER その他の権利者の公式サービスや公式認定を示すものではありません。素材の利用許諾や収益を保証しません。利用時は <a href="terms.html">利用規約</a> に従い、権利者の条件を確認する方針です。</p>
+</main>
+<footer><p>更新日：2026年10月25日</p><p>連絡先：Google OAuth 同意画面のサポート連絡先をご参照ください。</p></footer>
+</body>
+</html>
